@@ -7,7 +7,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 # Configure MongoDB connection using the URI you provided
 app.config["MONGO_URI"] = "mongodb+srv://to_list:Todo#123@todo.baqwe9c.mongodb.net/?retryWrites=true&w=majority&appName=ToDo"
-mongo = PyMongo(app)
+mongo = PyMongo(app, origins="https://to-do-list-react-frontend.vercel.app/")
 
 # Enable CORS to allow the React frontend to make requests
 CORS(app)
